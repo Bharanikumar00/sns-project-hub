@@ -1,26 +1,24 @@
 
 import { useState } from "react";
+import { UserRound } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Priya Sharma",
       role: "Computer Science Student, Delhi",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
       quote:
         "Thanks to Autumn, my final year project stood out from the rest. The mentorship and support were invaluable.",
     },
     {
       name: "Rahul Patel",
       role: "Engineering Student, Mumbai",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
       quote:
         "The project quality and documentation support helped me secure excellent grades. Highly recommended!",
     },
     {
       name: "Anisha Kumar",
       role: "IT Student, Bangalore",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
       quote:
         "Expert guidance and 24/7 support made my project journey smooth and stress-free.",
     },
@@ -55,11 +53,9 @@ const TestimonialsSection = () => {
                     className="w-full flex-shrink-0 px-4"
                   >
                     <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-20 h-20 rounded-full mx-auto mb-6 object-cover"
-                      />
+                      <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-autumn-purple/10 flex items-center justify-center">
+                        <UserRound className="w-12 h-12 text-autumn-purple" />
+                      </div>
                       <p className="text-gray-600 text-lg mb-6 italic">
                         "{testimonial.quote}"
                       </p>
