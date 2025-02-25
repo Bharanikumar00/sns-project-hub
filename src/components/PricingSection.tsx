@@ -73,7 +73,7 @@ const PricingSection = () => {
               {index === 1 && <span className="bg-autumn-purple text-white px-4 py-1 rounded-full text-sm absolute -mt-12 left-1/2 transform -translate-x-1/2">
                   Most Popular
                 </span>}
-              {index === 2 && <span className="bg-autumn-violet text-white px-4 py-1 rounded-full text-sm absolute -mt-12 left-1/2 transform -translate-x-1/2">
+              {index === 2 && <span className="bg-autumn-purple-800 text-white px-4 py-1 rounded-full text-sm absolute -mt-12 left-1/2 transform -translate-x-1/2">
                   Elite Category
                 </span>}
               <div className="text-center mb-8">
