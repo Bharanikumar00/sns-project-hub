@@ -16,7 +16,7 @@ const HeroSection = () => {
               <span className="text-autumn-purple">1000 Startup Goal</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We know you are struggling with creating your final year project, and we are here to help you completely
+              Our mission is to help you achieve a perfect 100/100 in your Project VIVA.
             </p>
             <div className="flex justify-center mb-12">
               <a
