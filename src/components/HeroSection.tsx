@@ -32,6 +32,9 @@ const HeroSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-autumn-purple text-autumn-purple px-8 py-3 rounded-lg hover:bg-autumn-purple/5 transition-all"
+                onClick={(e) => {
+                  window.open("https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing", "_blank", "noopener,noreferrer");
+                }}
               >
                 See a Demo
               </a>
