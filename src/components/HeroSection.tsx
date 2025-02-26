@@ -11,7 +11,7 @@ const HeroSection = () => {
               <span className="text-autumn-purple">1000 Startup Goal</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-             We know you are struggling with creating your final year project, and we are here to help you completely.
+             We know you are struggling with creating your final year project, and we are here to help you completely
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <a
