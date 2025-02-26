@@ -7,20 +7,17 @@ const TestimonialsSection = () => {
     {
       name: "Gayathri",
       role: "SNS Student",
-      quote:
-        "The cost was unimaginable and vey Low.Highly Recommended!",
+      quote: "The cost was unimaginable and vey Low.Highly Recommended!",
     },
     {
       name: "Mohan",
       role: "SNS Student",
-      quote:
-        "This service provided immense value.",
+      quote: "This service provided immense value.",
     },
     {
       name: "Monisha",
       role: "SNS Student",
-      quote:
-        "I was blown away by the quality of the project they delivered.",
+      quote: "I was blown away by the quality of the project they delivered.",
     },
   ];
 

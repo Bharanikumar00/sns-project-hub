@@ -1,8 +1,11 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -10,6 +13,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const navLinks = [{
     name: "Features",
     href: "#features"
@@ -20,30 +24,32 @@ const Navbar = () => {
     name: "Pricing",
     href: "#pricing"
   }];
-  return <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm" : ""}`}>
+
+  return (
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 font-bold text-2xl text-autumn-charcoal">Project-Hub</div>
           
           <div className="hidden md:flex items-center space-x-8">
-  {navLinks.map(link => (
-    <a
-      key={link.name}
-      href={link.href}
-      className="text-autumn-charcoal hover:text-autumn-purple transition-colors"
-    >
-      {link.name}
-    </a>
-  ))}
-  <a
-    href="https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing"
-    target="_blank" // Important for opening in a new tab
-    rel="noopener noreferrer" // Important for security when using target="_blank"
-    className="bg-autumn-purple text-white px-6 py-2 rounded-lg hover:bg-autumn-purple/90 transition-colors"
-  >
-    View Demo
-  </a>
-</div>
+            {navLinks.map(link => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-autumn-charcoal hover:text-autumn-purple transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+            <a
+              href="https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-autumn-purple text-white px-6 py-2 rounded-lg hover:bg-autumn-purple/90 transition-colors"
+            >
+              View Demo
+            </a>
+          </div>
 
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -51,17 +57,28 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu */}
-        {isMenuOpen && <div className="md:hidden">
+        {isMenuOpen && (
+          <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navLinks.map(link => <a key={link.name} href={link.href} className="block px-3 py-2 text-autumn-charcoal hover:text-autumn-purple transition-colors" onClick={() => setIsMenuOpen(false)}>
+              {navLinks.map(link => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block px-3 py-2 text-autumn-charcoal hover:text-autumn-purple transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {link.name}
-                </a>)}
+                </a>
+              ))}
               <button className="w-full bg-autumn-purple text-white px-6 py-2 rounded-lg hover:bg-autumn-purple/90 transition-colors">
                 Get Started
               </button>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navbar;

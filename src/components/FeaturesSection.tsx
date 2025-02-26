@@ -6,20 +6,17 @@ const FeaturesSection = () => {
     {
       icon: <BookOpen className="w-6 h-6 text-autumn-purple" />,
       title: "Premium Project Collection",
-      description:
-        "Get Advanced Projects at Very Low Price.",
+      description: "Get Advanced Projects at Very Low Price.",
     },
     {
       icon: <Star className="w-6 h-6 text-autumn-purple" />,
       title: "Complete Guidance",
-      description:
-        "Get Everything Needed for 100/100 in Project VIVA.",
+      description: "Get Everything Needed for 100/100 in Project VIVA.",
     },
     {
       icon: <Award className="w-6 h-6 text-autumn-purple" />,
       title: "Deploying Support",
-      description:
-        "Deploy Your App to the Internet.",
+      description: "Deploy Your App to the Internet.",
     },
   ];
 
