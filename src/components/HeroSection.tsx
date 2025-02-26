@@ -34,8 +34,8 @@ const HeroSection = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-autumn-purple/10 rounded-lg mb-4 mx-auto">
                   <GraduationCap className="text-autumn-purple" size={24} />
                 </div>
-                <h3 className="font-semibold mb-2">Detailed Research</h3>
-                <p className="text-gray-600 text-sm">Get Detailed Research Report</p>
+                <h3 className="font-semibold mb-2">100% Legal</h3>
+                <p className="text-gray-600 text-sm">We are Just Guiding You</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex items-center justify-center w-12 h-12 bg-autumn-purple/10 rounded-lg mb-4 mx-auto">
