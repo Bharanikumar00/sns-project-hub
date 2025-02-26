@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -68,7 +69,7 @@ const PricingSection = () => {
       discountedPrice: "₹699", // Changed
       description: "For Outstanding Projects",
       features: [
-        "Everything in Premium"
+        "Everything in Premium",
         "Advanced App",
         "Advanced AI Feature",
         "Expected Questions/Answers",
