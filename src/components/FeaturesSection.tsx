@@ -7,19 +7,19 @@ const FeaturesSection = () => {
       icon: <BookOpen className="w-6 h-6 text-autumn-purple" />,
       title: "Premium Project Collection",
       description:
-        "Access our extensive library of innovative and industry-relevant final year projects across multiple domains.",
+        "Get Advanced Projects at Very Low Price.",
     },
     {
       icon: <Star className="w-6 h-6 text-autumn-purple" />,
-      title: "Expert Mentorship",
+      title: "Complete Guidance",
       description:
-        "Get personalized guidance from industry experts who will help you enhance your project quality.",
+        "Get Everything Needed for 100/100 in Project VIVA.",
     },
     {
       icon: <Award className="w-6 h-6 text-autumn-purple" />,
-      title: "Documentation Support",
+      title: "Deploying Support",
       description:
-        "Comprehensive documentation assistance including research papers and project reports.",
+        "Deploy Your App to the Internet.",
     },
   ];
 

@@ -26,13 +26,24 @@ const Navbar = () => {
           <div className="flex-shrink-0 font-bold text-2xl text-autumn-charcoal">Project-Hub</div>
           
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map(link => <a key={link.name} href={link.href} className="text-autumn-charcoal hover:text-autumn-purple transition-colors">
-                {link.name}
-              </a>)}
-            <button className="bg-autumn-purple text-white px-6 py-2 rounded-lg hover:bg-autumn-purple/90 transition-colors">
-              Get Started
-            </button>
-          </div>
+  {navLinks.map(link => (
+    <a
+      key={link.name}
+      href={link.href}
+      className="text-autumn-charcoal hover:text-autumn-purple transition-colors"
+    >
+      {link.name}
+    </a>
+  ))}
+  <a
+    href="https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing"
+    target="_blank" // Important for opening in a new tab
+    rel="noopener noreferrer" // Important for security when using target="_blank"
+    className="bg-autumn-purple text-white px-6 py-2 rounded-lg hover:bg-autumn-purple/90 transition-colors"
+  >
+    View Demo
+  </a>
+</div>
 
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

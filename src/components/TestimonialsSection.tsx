@@ -5,22 +5,22 @@ import { UserRound } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "Computer Science Student, Delhi",
+      name: "Gayathri",
+      role: "SNS Student",
       quote:
-        "Thanks to Autumn, my final year project stood out from the rest. The mentorship and support were invaluable.",
+        "The cost was unimaginable and vey Low.Highly Recommended!",
     },
     {
-      name: "Rahul Patel",
-      role: "Engineering Student, Mumbai",
+      name: "Mohan",
+      role: "SNS Student",
       quote:
-        "The project quality and documentation support helped me secure excellent grades. Highly recommended!",
+        "This service provided immense value.",
     },
     {
-      name: "Anisha Kumar",
-      role: "IT Student, Bangalore",
+      name: "Monisha",
+      role: "SNS Student",
       quote:
-        "Expert guidance and 24/7 support made my project journey smooth and stress-free.",
+        "I was blown away by the quality of the project they delivered.",
     },
   ];
 

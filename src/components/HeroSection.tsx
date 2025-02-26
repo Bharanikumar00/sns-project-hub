@@ -7,43 +7,52 @@ const HeroSection = () => {
           <div className="animate-fade-in-slow">
             <span className="inline-block bg-autumn-purple/10 text-autumn-purple px-4 py-1 rounded-full text-sm font-medium mb-6">50+ Teams Already Got Projects From Us</span>
             <h1 className="text-4xl md:text-6xl font-bold text-autumn-charcoal mb-6 leading-tight">
-              Transform Your Final Year Project into a{" "}
-              <span className="text-autumn-purple">Masterpiece</span>
+              Mission To Achieve{" "}
+              <span className="text-autumn-purple">1000 Startup Goal</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Get access to premium final year projects, expert guidance, and 24/7 support. Stand out in your college with innovative solutions.
+             We know you are struggling with creating your final year project, and we are here to help you completely.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-              <button className="bg-autumn-purple text-white px-8 py-3 rounded-lg hover:bg-autumn-purple/90 transition-all transform hover:scale-105">
-                Explore Projects
-              </button>
-              <button className="border-2 border-autumn-purple text-autumn-purple px-8 py-3 rounded-lg hover:bg-autumn-purple/5 transition-all">
-                Book a Demo
-              </button>
-            </div>
-          </div>
+            <a
+    href="https://sns-demo.netlify.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-autumn-purple text-white px-8 py-3 rounded-lg hover:bg-autumn-purple/90 transition-all transform hover:scale-105"
+  >
+    Demo Project
+  </a>
+  <a
+    href="https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border-2 border-autumn-purple text-autumn-purple px-8 py-3 rounded-lg hover:bg-autumn-purple/5 transition-all"
+  >
+    See a Demo
+  </a>
+</div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in">
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center justify-center w-12 h-12 bg-autumn-purple/10 rounded-lg mb-4 mx-auto">
                 <GraduationCap className="text-autumn-purple" size={24} />
               </div>
-              <h3 className="font-semibold mb-2">Expert Guidance</h3>
-              <p className="text-gray-600 text-sm">One-on-one mentoring from industry experts</p>
+              <h3 className="font-semibold mb-2">Detailed Research</h3>
+              <p className="text-gray-600 text-sm">Get Detailed Research Report</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center justify-center w-12 h-12 bg-autumn-purple/10 rounded-lg mb-4 mx-auto">
                 <BookOpen className="text-autumn-purple" size={24} />
               </div>
-              <h3 className="font-semibold mb-2">Premium Projects</h3>
-              <p className="text-gray-600 text-sm">Unique and innovative project solutions</p>
+              <h3 className="font-semibold mb-2">AI Feature</h3>
+              <p className="text-gray-600 text-sm">Advanced AI Feature Implementation</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center justify-center w-12 h-12 bg-autumn-purple/10 rounded-lg mb-4 mx-auto">
                 <Award className="text-autumn-purple" size={24} />
               </div>
-              <h3 className="font-semibold mb-2">24/7 Support</h3>
-              <p className="text-gray-600 text-sm">Round-the-clock technical assistance</p>
+              <h3 className="font-semibold mb-2">Project Roadmap</h3>
+              <p className="text-gray-600 text-sm">Get Your Complete Project Roadmap</p>
             </div>
           </div>
         </div>
