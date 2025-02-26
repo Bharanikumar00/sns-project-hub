@@ -18,7 +18,7 @@ const HeroSection = () => {
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               We know you are struggling with creating your final year project, and we are here to help you completely
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <div className="flex justify-center mb-12">
               <a
                 href="https://sns-demo.netlify.app/"
                 target="_blank"
@@ -26,17 +26,6 @@ const HeroSection = () => {
                 className="bg-autumn-purple text-white px-8 py-3 rounded-lg hover:bg-autumn-purple/90 transition-all transform hover:scale-105"
               >
                 Demo Project
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-autumn-purple text-autumn-purple px-8 py-3 rounded-lg hover:bg-autumn-purple/5 transition-all"
-                onClick={(e) => {
-                  window.open("https://drive.google.com/file/d/1ALFNyCG1jqZ2tN-rOxTxcHsLE0BPgd6u/view?usp=sharing", "_blank", "noopener,noreferrer");
-                }}
-              >
-                See a Demo
               </a>
             </div>
 
