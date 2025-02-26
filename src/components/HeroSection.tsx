@@ -1,16 +1,11 @@
-
 import { GraduationCap, BookOpen, Award } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <div className="relative min-h-screen flex items-center">
+  return <div className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-br from-autumn-purple/5 to-autumn-orange/5" />
       <div className="container mx-auto px-4 pt-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in-slow">
-            <span className="inline-block bg-autumn-purple/10 text-autumn-purple px-4 py-1 rounded-full text-sm font-medium mb-6">
-              Trusted by 10,000+ Students
-            </span>
+            <span className="inline-block bg-autumn-purple/10 text-autumn-purple px-4 py-1 rounded-full text-sm font-medium mb-6">50+ Teams Already Got Projects From Us</span>
             <h1 className="text-4xl md:text-6xl font-bold text-autumn-charcoal mb-6 leading-tight">
               Transform Your Final Year Project into a{" "}
               <span className="text-autumn-purple">Masterpiece</span>
@@ -53,8 +48,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default HeroSection;
