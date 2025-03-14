@@ -44,7 +44,7 @@ const PricingSection = () => {
     discountedPrice: "₹399/team",
     // Changed
     description: "Simple project",
-    features: ["Simple App", "Free Research Report", "Free Project Roadmap", "Free AI Feature Document"]
+    features: ["Simple App", "Free Research Report", "Free AI Feature Document"]
   }, {
     name: "Premium",
     originalPrice: "₹1299",
@@ -52,7 +52,7 @@ const PricingSection = () => {
     discountedPrice: "₹499/team",
     // Changed
     description: "Most popular choice",
-    features: ["Complete App", "AI Feature Implementation", "Deploy to Internet-Everyone Can See", "Amazing PPT", "Complete Project Report"]
+    features: ["Complete App", "AI Feature Implementation", "Deploy to Internet-Everyone Can See", "Complete Project Report"]
   }, {
     name: "Elite",
     originalPrice: "₹1799",
@@ -60,7 +60,7 @@ const PricingSection = () => {
     discountedPrice: "₹699/team",
     // Changed
     description: "For Outstanding Projects",
-    features: ["Everything in Premium", "Advanced App", "Advanced AI Feature", "Expected Questions/Answers", "Personal Website", "Mock VIVA AI-For Practicing", "DT Playbook Content for Your Team", "Future Support"]
+    features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature", "Future Support"]
   }];
   const formatTime = (num: number) => num.toString().padStart(2, '0');
   return <section id="pricing" className="py-20 bg-gray-50">
