@@ -133,7 +133,7 @@ const PricingSection = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.3 }}
-                  className="bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white px-4 py-1 rounded-full text-sm absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md"
+                  className="bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white px-4 py-1 rounded-full text-sm absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md whitespace-nowrap"
                 >
                   Most Popular
                 </motion.span>
@@ -143,14 +143,14 @@ const PricingSection = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.3 }}
-                  className="bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white px-4 py-1 rounded-full text-sm absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md"
+                  className="bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white px-4 py-1 rounded-full text-sm absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md whitespace-nowrap"
                 >
                   Elite Category
                 </motion.span>
               )}
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-autumn-charcoal mb-2">
+                <h3 className="text-2xl font-bold text-autumn-charcoal mb-2 text-center w-full">
                   {plan.name}
                 </h3>
                 <p className="text-gray-600 mb-4">{plan.description}</p>
