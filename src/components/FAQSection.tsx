@@ -3,14 +3,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const FAQSection = () => {
   const faqs = [{
-    question: "Is it illegal to Get projects from you?",
+    question: "Is it Llegal to Get projects from us?",
     answer: "100% Legal to Get Projects From Us"
   }, {
     question: "What kind of support do you provide during the project?",
     answer: "We provide Complete support including technical guidance, documentation assistance, regular progress updates, and 24/7 support via email and chat. Our expert mentors are always available to help you understand complex concepts and resolve any issues."
   }, {
     question: "How long does it take to complete a project?",
-    answer: "Project completion time typically ranges from 1-2 days depending on complexity and requirements. We ensure timely delivery while maintaining high quality standards. Our team works closely with you to meet your college submission deadlines."
+    answer: "Project completion time typically ranges from 1-2 hours depending on complexity and requirements. We ensure timely delivery while maintaining high quality standards. Our team works closely with you to meet your college submission deadlines."
   }, {
     question: "Do you help with project documentation and presentation?",
     answer: "Yes, we provide complete documentation support including project reports,and presentation materials. Our documentation follows standard academic formats."
