@@ -1,4 +1,3 @@
-
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -9,7 +8,7 @@ const PricingSection = () => {
     minutes: 59,
     seconds: 59
   });
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -41,7 +40,7 @@ const PricingSection = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
-  
+
   const plans = [{
     name: "Basic",
     originalPrice: "₹999",
@@ -61,9 +60,9 @@ const PricingSection = () => {
     description: "For Outstanding Projects",
     features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature", "Future Support"]
   }];
-  
+
   const formatTime = (num: number) => num.toString().padStart(2, '0');
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -82,11 +81,11 @@ const PricingSection = () => {
       transition: { duration: 0.5 }
     }
   };
-  
+
   return (
     <section id="pricing" className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -107,7 +106,7 @@ const PricingSection = () => {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
@@ -115,40 +114,33 @@ const PricingSection = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           {plans.map((plan, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
               }}
-              className={`bg-white rounded-xl shadow-lg p-8 relative ${
-                index === 1 ? "border-2 border-autumn-purple md:transform md:scale-105" : 
-                index === 2 ? "border-2 border-autumn-orange md:transform md:scale-105" : 
-                "hover:border-2 hover:border-gray-200"
-              }`}
+              className={`bg-white rounded-xl shadow-lg p-8 relative ${index === 1 ? "border-2 border-autumn-purple md:transform md:scale-105" :
+                index === 2 ? "border-2 border-autumn-orange md:transform md:scale-105" :
+                  "hover:border-2 hover:border-gray-200"
+                }`}
             >
-              {index === 1 && (
-                <motion.span 
+              {/* Centering Labels - Key Change #1 */}
+              { (index === 1 || index === 2) && (
+                <div className="absolute -top-3 left-0 w-full flex justify-center">
+                <motion.span
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.3 }}
-                  className="bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white px-4 py-1 rounded-full text-sm absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md whitespace-nowrap"
+                  className={`bg-gradient-to-r  text-white px-4 py-1 rounded-full text-sm  shadow-md whitespace-nowrap ${index === 1 ? "from-autumn-purple to-autumn-purple/90" : "from-autumn-orange to-autumn-orange/90"}`}
                 >
-                  Most Popular
+                  {index === 1 ? "Most Popular" : "Elite Category"}
                 </motion.span>
+                </div>
               )}
-              {index === 2 && (
-                <motion.span 
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5, duration: 0.3 }}
-                  className="bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white px-4 py-1 rounded-full text-sm absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md whitespace-nowrap"
-                >
-                  Elite Category
-                </motion.span>
-              )}
-              
+
+
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-autumn-charcoal mb-2 text-center w-full">
                   {plan.name}
@@ -163,11 +155,11 @@ const PricingSection = () => {
                   </span>
                 </div>
               </div>
-              
+
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
-                  <motion.li 
-                    key={featureIndex} 
+                  <motion.li
+                    key={featureIndex}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 * featureIndex, duration: 0.3 }}
@@ -179,15 +171,14 @@ const PricingSection = () => {
                   </motion.li>
                 ))}
               </ul>
-              
-              <motion.button 
+
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-full py-3 rounded-lg transition-colors ${
-                  index === 1 ? "bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white shadow-md hover:shadow-lg" : 
-                  index === 2 ? "bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white shadow-md hover:shadow-lg" : 
-                  "border-2 border-autumn-purple text-autumn-purple hover:bg-autumn-purple/5"
-                }`}
+                className={`w-full py-3 rounded-lg transition-colors ${index === 1 ? "bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white shadow-md hover:shadow-lg" :
+                  index === 2 ? "bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white shadow-md hover:shadow-lg" :
+                    "border-2 border-autumn-purple text-autumn-purple hover:bg-autumn-purple/5"
+                  }`}
               >
                 Get Started
               </motion.button>
