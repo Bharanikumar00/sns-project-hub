@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const FAQSection = () => {
   const faqs = [{
-    question: "Is it illegal to Get projects from you?",
+    question: "Is it Legal to Get projects from you?",
     answer: "100% Legal to Get Projects From Us"
   }, {
     question: "What kind of support do you provide during the project?",
