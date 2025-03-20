@@ -41,25 +41,22 @@ const PricingSection = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const plans = [{
-    name: "Basic",
-    originalPrice: "₹999",
-    discountedPrice: "₹399/team",
-    description: "Simple project",
-    features: ["Simple App", "Free Research Report", "Free AI Feature Document"]
-  }, {
-    name: "Premium",
-    originalPrice: "₹1299",
-    discountedPrice: "₹499/team",
-    description: "Most popular choice",
-    features: ["Complete App", "AI Feature Implementation", "Deploy to Internet-Everyone Can See", "Complete Project Report"]
-  }, {
-    name: "Elite",
-    originalPrice: "₹1799",
-    discountedPrice: "₹699/team",
-    description: "For Outstanding Projects",
-    features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature", "Future Support"]
-  }];
+  const plans = [
+    {
+      name: "Premium",
+      originalPrice: "₹1299",
+      discountedPrice: "₹499/team",
+      description: "Most popular choice",
+      features: ["Complete App", "AI Feature Implementation", "Deploy to Internet-Everyone Can See", "Complete Project Report"]
+    }, 
+    {
+      name: "Elite",
+      originalPrice: "₹1799",
+      discountedPrice: "₹699/team",
+      description: "For Outstanding Projects",
+      features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature", "Future Support"]
+    }
+  ];
 
   const formatTime = (num: number) => num.toString().padStart(2, '0');
 
@@ -107,7 +104,7 @@ const PricingSection = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -121,25 +118,22 @@ const PricingSection = () => {
                 y: -10,
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
               }}
-              className={`bg-white rounded-xl shadow-lg p-8 relative ${index === 1 ? "border-2 border-autumn-purple md:transform md:scale-105" :
-                index === 2 ? "border-2 border-autumn-orange md:transform md:scale-105" :
-                  "hover:border-2 hover:border-gray-200"
-                }`}
+              className={`bg-white rounded-xl shadow-lg p-8 relative ${
+                index === 0 ? "border-2 border-autumn-purple" : "border-2 border-autumn-orange"
+              }`}
             >
-              {/* Centering Labels - Key Change #1 */}
-              { (index === 1 || index === 2) && (
-                <div className="absolute -top-3 left-0 w-full flex justify-center">
+              <div className="absolute -top-3 left-0 w-full flex justify-center">
                 <motion.span
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.3 }}
-                  className={`bg-gradient-to-r  text-white px-4 py-1 rounded-full text-sm  shadow-md whitespace-nowrap ${index === 1 ? "from-autumn-purple to-autumn-purple/90" : "from-autumn-orange to-autumn-orange/90"}`}
+                  className={`bg-gradient-to-r text-white px-4 py-1 rounded-full text-sm shadow-md whitespace-nowrap ${
+                    index === 0 ? "from-autumn-purple to-autumn-purple/90" : "from-autumn-orange to-autumn-orange/90"
+                  }`}
                 >
-                  {index === 1 ? "Most Popular" : "Elite Category"}
+                  {index === 0 ? "Most Popular" : "Elite Category"}
                 </motion.span>
-                </div>
-              )}
-
+              </div>
 
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-autumn-charcoal mb-2 text-center w-full">
@@ -166,7 +160,9 @@ const PricingSection = () => {
                     viewport={{ once: true }}
                     className="flex items-center"
                   >
-                    <Check className={`w-5 h-5 ${index === 1 ? "text-autumn-purple" : index === 2 ? "text-autumn-orange" : "text-green-500"} mr-2`} />
+                    <Check className={`w-5 h-5 ${
+                      index === 0 ? "text-autumn-purple" : "text-autumn-orange"
+                    } mr-2`} />
                     <span className="text-gray-600">{feature}</span>
                   </motion.li>
                 ))}
@@ -175,10 +171,11 @@ const PricingSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-full py-3 rounded-lg transition-colors ${index === 1 ? "bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white shadow-md hover:shadow-lg" :
-                  index === 2 ? "bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white shadow-md hover:shadow-lg" :
-                    "border-2 border-autumn-purple text-autumn-purple hover:bg-autumn-purple/5"
-                  }`}
+                className={`w-full py-3 rounded-lg transition-colors ${
+                  index === 0 
+                    ? "bg-gradient-to-r from-autumn-purple to-autumn-purple/90 text-white shadow-md hover:shadow-lg" 
+                    : "bg-gradient-to-r from-autumn-orange to-autumn-orange/90 text-white shadow-md hover:shadow-lg"
+                }`}
               >
                 Get Started
               </motion.button>
