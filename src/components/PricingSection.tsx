@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -45,14 +46,14 @@ const PricingSection = () => {
     {
       name: "Premium",
       originalPrice: "₹1299",
-      discountedPrice: "₹499/team",
+      discountedPrice: "₹699/team",
       description: "Most popular choice",
       features: ["Complete App", "AI Feature Implementation", "Deploy to Internet-Everyone Can See", "Complete Project Report"]
     }, 
     {
       name: "Elite",
       originalPrice: "₹1799",
-      discountedPrice: "₹699/team",
+      discountedPrice: "₹999/team",
       description: "For Outstanding Projects",
       features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature", "Future Support"]
     }
@@ -158,11 +159,11 @@ const PricingSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 * featureIndex, duration: 0.3 }}
                     viewport={{ once: true }}
-                    className="flex items-center"
+                    className="flex items-center justify-center text-center"
                   >
                     <Check className={`w-5 h-5 ${
                       index === 0 ? "text-autumn-purple" : "text-autumn-orange"
-                    } mr-2`} />
+                    } mr-2 flex-shrink-0`} />
                     <span className="text-gray-600">{feature}</span>
                   </motion.li>
                 ))}
