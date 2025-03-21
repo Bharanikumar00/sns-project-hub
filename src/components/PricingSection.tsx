@@ -48,14 +48,14 @@ const PricingSection = () => {
       originalPrice: "₹1299",
       discountedPrice: "₹699/team",
       description: "Most popular choice",
-      features: ["Complete App", "AI Feature Implementation", "Deploy to Internet-Everyone Can See", "Complete Project Report"]
+      features: ["Complete App", "AI Feature Implementation", "Deploy to Internet", "Everyone Can See"]
     }, 
     {
       name: "Elite",
       originalPrice: "₹1799",
       discountedPrice: "₹999/team",
       description: "For Outstanding Projects",
-      features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature", "Future Support"]
+      features: ["Everything in Premium", "Complete Advanced App", "Multiple Pages", "Advanced AI Feature","Complete Project Report", "Future Support"]
     }
   ];
 
